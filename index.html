@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexi - AI Legal Navigator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lexi: Your AI Legal Navigator</h1>
+        <p>Upload a legal document to get a simple summary.</p>
+        <input type="file" id="docUploader" accept=".txt,.docx,.pdf,.png,.jpg,.jpeg,.webp">
+        <div class="language-selector">
+    <label for="outputLang">Select Summary Language:</label>
+    <select id="outputLang">
+        <option value="the document's original language" selected>Auto-Detect (Default)</option>
+        <optgroup label="Common">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Chinese (Simplified)">Chinese (Simplified)</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Arabic">Arabic</option>
+            <option value="Russian">Russian</option>
+            <option value="Portuguese">Portuguese</option>
+             <option value="Gujarati">Gujarati</option>
+            <option value="Hindi">Hindi</option>
+        </optgroup>
+    </select>
+</div>
+        <button id="summarizeBtn">Summarize</button>
+        <div id="loadingSpinner" class="hidden"></div>
+        <h2>Summary:</h2>
+        <div id="summaryOutput">
+            Your summary will appear here...
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
